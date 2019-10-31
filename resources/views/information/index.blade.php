@@ -12,16 +12,17 @@
 
 <br>
 <div class="container">
-<a href="{{ route('alumno.create') }}">Nuevo Alumno</a>
+<a href="{{ route('information.create') }}">Agregar Informacion</a>
 <br>
 <table class="table table-striped">
 <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">dni</th>
       <th scope="col">Nombre</th>
-      <th scope="col">Fecha Nac.</th>
-      <th scope="col">Accion</th>
+      <th scope="col">Direccion</th>
+      <th scope="col">Fecha </th>
+      <th scope="col">T. Institucion</th>
+      <th scope="col">RUC</th>
     </tr>
   </thead>
   <tbody>
@@ -29,12 +30,14 @@
         @foreach($models as $model)
         <tr>
         <th scope="row">{{ $model->id }}</th>
-            <td>{{ $model->dni }}</td>
             <td>{{ $model->nombre }}</td>
-            <td>{{ $model->fecha_nac }}</td>
+            <td>{{ $model->direccion }}</td>
+            <td>{{ $model->fecha }}</td>
+            <td>{{ $model->t_institucion }}</td>
+            <td>{{ $model->ruc }}</td>
             <td>
-                <a href="{{ route('alumno.edit',$model->id) }}">Editar</a>
-                <a href="{{ route('alumno.delete',$model->id) }}">Eliminar</a>
+                <a href="{{ route('information.edit',$model->id) }}">Editar</a>
+                <a href="{{ route('information.delete',$model->id) }}">Eliminar</a>
             </td>
         </tr>
          @endforeach

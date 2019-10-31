@@ -23,3 +23,12 @@ Route::group(['prefix'=>'alumno'],function(){
     Route::post('edit/{id}',['as'=>'alumno.update','uses'=>'AlumnoController@update']);
     Route::get('delete/{id}',['as'=>'alumno.delete','uses'=>'AlumnoController@delete']);
 });
+
+Route::group(['prefix'=>'information'],function(){
+    Route::get('/',['as'=>'information.index','uses'=>'InformationController@index']);
+    Route::get('create',['as'=>'information.create','uses'=>'InformationController@create']);
+    Route::post('create',['as'=>'information.store','uses'=>'InformationController@store']);
+    Route::get('edit/{id}',['as'=>'information.edit','uses'=>'InformationController@edit']);
+    Route::post('edit/{id}',['as'=>'information.update','uses'=>'InformationController@update']);
+    Route::get('delete/{id}',['as'=>'information.delete','uses'=>'InformationController@delete']);
+});
