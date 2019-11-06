@@ -32,3 +32,12 @@ Route::group(['prefix'=>'information'],function(){
     Route::post('edit/{id}',['as'=>'information.update','uses'=>'InformationController@update']);
     Route::get('delete/{id}',['as'=>'information.delete','uses'=>'InformationController@delete']);
 });
+
+Route::group(['prefix'=>'matricula'],function(){
+    Route::get('/',['as'=>'matricula.index','uses'=>'MatriculaController@index']);
+    Route::get('create',['as'=>'matricula.create','uses'=>'MatriculaController@create']);
+    Route::post('create',['as'=>'matricula.store','uses'=>'MatriculaController@store']);
+    Route::get('edit/{id}',['as'=>'matricula.edit','uses'=>'MatriculaController@edit']);
+    Route::post('edit/{id}',['as'=>'matricula.update','uses'=>'MatriculaController@update']);
+    Route::get('delete/{id}',['as'=>'matricula.delete','uses'=>'MatriculaController@delete']);
+});

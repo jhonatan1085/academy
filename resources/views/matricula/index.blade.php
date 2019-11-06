@@ -1,28 +1,23 @@
 @extends('layout.index')
 
 @section('title')
-   Informacion
+   Matricula
 @endsection
 
 @section('content')
 
 
-
-
-
 <br>
 <div class="container">
-<a href="{{ route('information.create') }}">Agregar Informacion</a>
+<a href="{{ route('matricula.create') }}">Agregar Matricula</a>
 <br>
 <table class="table table-striped">
 <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Direccion</th>
+      <th scope="col">Codigo</th>
       <th scope="col">Fecha </th>
-      <th scope="col">T. Institucion</th>
-      <th scope="col">RUC</th>
+      <th scope="col">Alumno</th>
       <th scope="col">Acciones</th>
     </tr>
   </thead>
@@ -31,14 +26,12 @@
         @foreach($models as $model)
         <tr>
         <th scope="row">{{ $model->id }}</th>
-            <td>{{ $model->nombre }}</td>
-            <td>{{ $model->direccion }}</td>
+            <td>{{ $model->codigo }}</td>
             <td>{{ $model->fecha }}</td>
-            <td>{{ $model->t_institucion }}</td>
-            <td>{{ $model->ruc }}</td>
+            <td>{{ $model->alumno->nombre }}</td>
             <td>
-                <a href="{{ route('information.edit',$model->id) }}">Editar</a>
-                <a href="{{ route('information.delete',$model->id) }}">Eliminar</a>
+                <a href="{{ route('matricula.edit',$model->id) }}">Editar</a>
+                <a href="{{ route('matricula.delete',$model->id) }}">Eliminar</a>
             </td>
         </tr>
          @endforeach

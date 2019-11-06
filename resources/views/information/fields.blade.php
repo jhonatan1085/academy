@@ -5,6 +5,6 @@
 {{ Form::label('fecha','Fecha') }}
 {{ Form::text('fecha') }}<br>
 {{ Form::label('tInstitucion','T. Institucion') }}
-{{ Form::text('t_institucion') }}<br>
+{{ Form::select('t_institucion', ['privada' => 'Privada', 'publica' => 'Publica']) }}<br>
 {{ Form::label('ruc','Ruc') }}
 {{ Form::text('ruc') }}<br>

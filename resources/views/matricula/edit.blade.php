@@ -6,8 +6,8 @@
 
 @section('content')
 <br><br>
-    {{ Form::model($model,['route'=>['information.update',$model->id],'method'=>'post']) }}
-        @include('information.fields')
+    {{ Form::model($model,['route'=>['matricula.update',$model->id],'method'=>'post']) }}
+        @include('matricula.fields')
         {{ Form::submit('Actualizar') }}
     {{ Form::close() }}
     <br><br>
