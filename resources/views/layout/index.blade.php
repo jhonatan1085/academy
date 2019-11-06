@@ -15,7 +15,22 @@
 <body>
     {{-- Esto es un comentario --}}
     <header>
-        <h1>BIENVENIDOS A LARAVEL</h1>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="#">
+                <img src="../img/colegio.png" alt="Logo" style="width:40px;">
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('alumno.index') }}">Alumno</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('matricula.index') }}">Matricula</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('information.index') }}">Informacion</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <div id="content">
